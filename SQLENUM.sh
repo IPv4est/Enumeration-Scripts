@@ -35,4 +35,4 @@ nmap $IP -p $PORT --script mysql-audit --script-args "mysql-audit.username='$USE
 
 #nmap script hashdump
 echo "Nmap script hashdump" >> {$IP}{$USER}SQLENUM.txt
-nmap $IP -p $PORT --script mysql-dump-hashes -–script-args="username='$USER',password=$PASSWORD" 
+nmap $IP -p $PORT --script mysql-dump-hashes -–script-args="username='$USER',password=$PASSWORD" --append-output -oN {$IP}{$USER}SQLENUM.txt
