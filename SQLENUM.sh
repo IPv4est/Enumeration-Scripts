@@ -33,4 +33,6 @@ nmap $IP -p $PORT --script mysql-variables --script-args="mysqluser='$USER',mysq
 echo "Nmap script audit" >> {$IP}{$USER}SQLENUM.txt
 nmap $IP -p $PORT --script mysql-audit --script-args "mysql-audit.username='$USER',mysql-audit.password=$PASSWORD,mysql-audit.filename='/usr/share/nmap/nselib/data/mysql-cis.audit'" --append-output -oN {$IP}{$USER}SQLENUM.txt
 
-
+#nmap script hashdump
+echo "Nmap script hashdump" >> {$IP}{$USER}SQLENUM.txt
+nmap $IP -p $PORT --script mysql-dump-hashes -–script-args="username='$USER',password=$PASSWORD" 
