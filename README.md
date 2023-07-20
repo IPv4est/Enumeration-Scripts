@@ -1,2 +1,2 @@
 # Enumeration-Scripts
-# Beginner in cyber security, attempting to create scripts to steamline enumeration basics in penetration testing
+# Beginner in cyber security, attempting to create scripts to streamline enumeration basics in penetration testing
